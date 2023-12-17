@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/cipriancozma/namaste-react/issues"
   },
-  "homepage": "https://github.com/cipriancozma/namaste-react#readme"
+  "homepage": "https://github.com/cipriancozma/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
 }
