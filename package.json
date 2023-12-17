@@ -1,0 +1,22 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "Namaste React by Ciprian Cozma",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cipriancozma/namaste-react.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Ciprian Cozma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cipriancozma/namaste-react/issues"
+  },
+  "homepage": "https://github.com/cipriancozma/namaste-react#readme"
+}
