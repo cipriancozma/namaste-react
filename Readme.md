@@ -41,3 +41,7 @@ R:
 - Error Handling
 - HTTPs
 - Tree Shaking - remove unused code
+
+## 8. What is browserslist?
+
+R: Browserslist is a NPM package used for compatibility with the old browsers. (which browsers your app should support)
