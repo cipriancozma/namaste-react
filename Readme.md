@@ -40,3 +40,4 @@ R:
 - Differential Bundling - support older browsers
 - Error Handling
 - HTTPs
+- Tree Shaking - remove unused code
