@@ -4,7 +4,9 @@
   "description": "Namaste React by Ciprian Cozma",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,8 @@
   },
   "homepage": "https://github.com/cipriancozma/namaste-react#readme",
   "devDependencies": {
-    "parcel": "^2.10.3"
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
   },
   "dependencies": {
     "react": "^18.2.0",

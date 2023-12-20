@@ -45,3 +45,7 @@ R:
 ## 8. What is browserslist?
 
 R: Browserslist is a NPM package used for compatibility with the old browsers. (which browsers your app should support)
+
+## 9. What is JSX?
+
+R: JSX is javascript syntax to create React elements. (HTML like syntax)
