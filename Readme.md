@@ -49,3 +49,7 @@ R: Browserslist is a NPM package used for compatibility with the old browsers. (
 ## 9. What is JSX?
 
 R: JSX is javascript syntax to create React elements. (HTML like syntax)
+
+## 10. What is a functional component in React?
+
+R: A functional component in React is a Javascript function which returns JSX.
