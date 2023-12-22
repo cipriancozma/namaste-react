@@ -53,3 +53,7 @@ R: JSX is javascript syntax to create React elements. (HTML like syntax)
 ## 10. What is a functional component in React?
 
 R: A functional component in React is a Javascript function which returns JSX.
+
+## 11. What is the role of type="module" in script tag?
+
+R: This value causes the code to be treated as JavaScript module.
