@@ -22,7 +22,10 @@ R: Package-lock.json keeps the exact version that it is installed on the depende
 
 ## 6. What is the difference between async vs defer in JavaScript?
 
-R:
+R: Async and Defer are boolean attributes on the script tags.
+With defer attribute, the script is running only after the html parser is complete. The scripts are fetched but it will be run only if the html parser is completed.
+With async attribute, the script is fetched at the same time with html parsing phase but at soon is fetched, the html parser is paused and the script is starting to be executed. Only after the script is finished, then the html parser will continue.
+Without these attributes the html parser will be paused when it will encounter a script that it will be fetched and run, and only after the script is completely fetched and executed, the html parser will continue to run.
 
 ## 7. What does Parcel do?
 
