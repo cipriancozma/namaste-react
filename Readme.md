@@ -63,3 +63,7 @@ R: A functional component in React is a Javascript function which returns JSX.
 ## 11. What is the role of type="module" in script tag?
 
 R: This value causes the code to be treated as JavaScript module.
+
+## 12. What is config driven UI?
+
+R: The app is driven by configs. The config driven UI means that the UI is driven by a config (all the data, configs are coming from the backend).
