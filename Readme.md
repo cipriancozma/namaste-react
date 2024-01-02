@@ -67,3 +67,9 @@ R: This value causes the code to be treated as JavaScript module.
 ## 12. What is config driven UI?
 
 R: The app is driven by configs. The config driven UI means that the UI is driven by a config (all the data, configs are coming from the backend).
+
+## 13. Why do we need keys on mapping over an array of elements?
+
+R: It is important that React knows the keys which should be unique in order to not re-render the entire list. If the keys are unique, React will render only the item that is removed or added.
+
+If the keys are not present, then a warning will be thrown and React doesn't know how to unique identify the elements and in case of removing or adding elements, will re-render all of them.
