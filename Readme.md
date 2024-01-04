@@ -73,3 +73,7 @@ R: The app is driven by configs. The config driven UI means that the UI is drive
 R: It is important that React knows the keys which should be unique in order to not re-render the entire list. If the keys are unique, React will render only the item that is removed or added.
 
 If the keys are not present, then a warning will be thrown and React doesn't know how to unique identify the elements and in case of removing or adding elements, will re-render all of them.
+
+## 14. What is the Virtual DOM?
+
+R: The Virtual DOM is a programming concept where an ideal or virtual representation of the UI is kept in the memory and synced with the real DOM by a library named ReactDOM. This process is called reconciliation.
