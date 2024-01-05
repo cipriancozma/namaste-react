@@ -1,4 +1,4 @@
-const RestaurantCard = () => {
+const RestaurantCard = ({ restaurant }) => {
   return (
     <div className="restaurant-card">
       <img alt="restaurant-logo" className="restaurant-logo" />
