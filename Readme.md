@@ -77,3 +77,20 @@ If the keys are not present, then a warning will be thrown and React doesn't kno
 ## 14. What is the Virtual DOM?
 
 R: The Virtual DOM is a programming concept where an ideal or virtual representation of the UI is kept in the memory and synced with the real DOM by a library named ReactDOM. This process is called reconciliation.
+
+## 15. What is the Diff Algorithm?
+
+R: The Diff Algorithm makes a comparison between the modified Virtual DOM and the previous Virtual DOM.
+
+## 16. Why React is fast?
+
+R: Because it has Virtual DOM, because it has Diff Algorithm, because it has React Fiber, the whole core react algorithm updates the DOM smoother and fast, it finds out the differences between the two virtual doms and updates the UI.
+
+## 17. What is Monolith Architecture?
+
+R: Everything is inside the same project. All the code is part of the same project.
+
+## 18. What is a Microservices Architecture?
+
+R: Different services for every functionality of the app. All these services combine together forms a big app.
+Each and every services has its own job.
