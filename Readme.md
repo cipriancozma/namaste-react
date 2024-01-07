@@ -94,3 +94,15 @@ R: Everything is inside the same project. All the code is part of the same proje
 
 R: Different services for every functionality of the app. All these services combine together forms a big app.
 Each and every services has its own job.
+
+## 19. What approach is React using in rendering the data?
+
+R: Loads the app -> Render -> API fetch -> Render
+
+This approach is for a better UX.
+
+## 20. What is a Shimmer UI?
+
+R: Shimmer UI is good for a better UX. If the data takes too much to be rendered on the page, we can use Shimmer UI in order to render a fake data until everything loads.
+
+e.g. For a page where there are a lot of cards, we can load fake cards until the real ones are available. This can be a good solution instead the loading spinner.
