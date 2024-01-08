@@ -1,11 +1,19 @@
 const RestaurantCard = ({ restaurant }) => {
+  console.log({ restaurant });
+  const { id, avgRating, name, cuisines, sla, cloudinaryImageId } =
+    restaurant?.info;
+
   return (
-    <div className="restaurant-card">
-      <img alt="restaurant-logo" className="restaurant-logo" />
-      <h3>KFC</h3>
-      <h4>Biryani, Indian Cuisine</h4>
-      <h4>4.4 stars</h4>
-      <h4>40 minutes</h4>
+    <div className="restaurant-card" key={id}>
+      <img
+        alt={`Logo of ${name}`}
+        className="restaurant-logo"
+        src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
+      />
+      <h3>{name}</h3>
+      <h4>{cuisines.join(" ")}</h4>
+      <h4>{avgRating} stars</h4>
+      <h4>{sla?.deliveryTime} minutes</h4>
     </div>
   );
 };
