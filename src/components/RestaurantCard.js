@@ -1,8 +1,6 @@
 const RestaurantCard = ({ restaurant }) => {
-  console.log({ restaurant });
   const { id, avgRating, name, cuisines, sla, cloudinaryImageId } =
     restaurant?.info;
-
   return (
     <div className="restaurant-card" key={id}>
       <img

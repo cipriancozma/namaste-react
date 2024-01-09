@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -14,7 +15,9 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    setListOfRestaurants(json?.data?.cards);
+    setListOfRestaurants(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
   if (listOfRestaurants.length === 0) {
@@ -22,34 +25,42 @@ const Body = () => {
   }
 
   const handleTopRated = () => {
-    const mappedTopRated = listOfRestaurants.map(
-      (restaurant) =>
-        restaurant?.card?.card?.gridElements?.infoWithStyle?.restaurants || []
+    const filteredTopRatedRestaurants = listOfRestaurants.filter(
+      (res) => res?.info?.avgRating > 4
     );
-
-    const allRestaurants = mappedTopRated
-      .filter((array) => array.length > 0)
-      .flat()
-      .filter((res) => res?.info?.avgRating > 4);
-
-    setListOfRestaurants(allRestaurants);
+    setListOfRestaurants(filteredTopRatedRestaurants);
   };
-  console.log({ listOfRestaurants });
 
   return (
     <div className="body">
       <div className="filter">
         <div className="search">
-          <input type="text" className="search-box" />
-          <button>Search</button>
+          <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            onClick={() => {
+              const filteredRestaurants = listOfRestaurants.filter((res) =>
+                res?.info?.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setListOfRestaurants(filteredRestaurants);
+            }}
+          >
+            Search
+          </button>
         </div>
         <button className="filter-btn" onClick={handleTopRated}>
           Top Rated
         </button>
       </div>
       <div className="restaurant-container">
-        {listOfRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant?.info?.id} restaurant={restaurant} />
+        {listOfRestaurants.map((res) => (
+          <RestaurantCard key={res?.info?.id} restaurant={res} />
         ))}
       </div>
     </div>
