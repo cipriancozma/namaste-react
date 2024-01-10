@@ -17,14 +17,14 @@ const Body = () => {
     );
     const json = await data.json();
     const restaurants =
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
 
     setListOfRestaurants(restaurants);
     setDisplayedRestaurants(restaurants);
   };
 
-  if (listOfRestaurants.length === 0) {
+  if (listOfRestaurants?.length === 0) {
     return <Shimmer />;
   }
 
@@ -32,7 +32,7 @@ const Body = () => {
     const filteredTopRatedRestaurants = listOfRestaurants.filter(
       (res) => res?.info?.avgRating > 4
     );
-    setListOfRestaurants(filteredTopRatedRestaurants);
+    setDisplayedRestaurants(filteredTopRatedRestaurants);
   };
 
   return (
@@ -64,9 +64,10 @@ const Body = () => {
         </button>
       </div>
       <div className="restaurant-container">
-        {displayedRestaurants.map((res) => (
-          <RestaurantCard key={res?.info?.id} restaurant={res} />
-        ))}
+        {displayedRestaurants &&
+          displayedRestaurants.map((res) => (
+            <RestaurantCard key={res?.info?.id} restaurant={res} />
+          ))}
       </div>
     </div>
   );
