@@ -110,3 +110,11 @@ e.g. For a page where there are a lot of cards, we can load fake cards until the
 ## 21. What happens when state variables update?
 
 R: Whenever state variables update, react triggers a reconciliation cycle (re-renders the component)
+
+## 22. How useEffect hook works?
+
+R: If no dependency array => useEffect is called on every render
+
+If dependency array is empty = [] => useEffect is called on initial render (just once)
+
+If dependency array is not empty =[something here] => useEffect is called when the variable inside the array changes
