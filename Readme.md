@@ -118,3 +118,11 @@ R: If no dependency array => useEffect is called on every render
 If dependency array is empty = [] => useEffect is called on initial render (just once)
 
 If dependency array is not empty =[something here] => useEffect is called when the variable inside the array changes
+
+## 23. How many types of routing are in the web apps?
+
+R: Client Side Routing and Server Side Routing
+
+Server Side Routing means -> make a call to the server to bring some data -> server sends the data -> data is loaded and the page is refreshed.
+
+Client Side Routing means -> change the routing pages without refreshing the page.
