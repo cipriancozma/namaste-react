@@ -126,3 +126,7 @@ R: Client Side Routing and Server Side Routing
 Server Side Routing means -> make a call to the server to bring some data -> server sends the data -> data is loaded and the page is refreshed.
 
 Client Side Routing means -> change the routing pages without refreshing the page.
+
+# 24. What is reconciliation?
+
+R: The algo React uses to diff one tree with another to determine which parts need to be changed.
